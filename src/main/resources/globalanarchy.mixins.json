@@ -1,12 +1,10 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.blockhost.anarchymod.mixin",
+  "package": "net.blockhost.globalanarchy.mixin",
   "compatibilityLevel": "JAVA_${java_version}",
   "client": [
-    "BlockedServersMixin",
-    "ClientPacketListenerMixin",
-    "ServerListMixin"
+    "BlockedServersMixin"
   ],
   "injectors": {
     "defaultRequire": 1

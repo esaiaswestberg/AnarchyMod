@@ -90,7 +90,7 @@ jobs:
           REPO="${{ github.repository }}"
           DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}"
 
-          link() { echo "[${1}](${DOWNLOAD_URL}/anarchymod-mc-${1}-${VERSION}.jar)"; }
+          link() { echo "[${1}](${DOWNLOAD_URL}/globalanarchy-mc-${1}-${VERSION}.jar)"; }
           join() { local IFS=","; local out="$*"; echo "${out//,/, }"; }
 
           mapfile -t MC_VERSIONS < <(for f in versions/*/gradle.properties; do
@@ -133,16 +133,16 @@ jobs:
           )
 
           shopt -s nullglob
-          ASSETS=(versions/*/build/libs/anarchymod-mc-*-"${VERSION}".jar)
+          ASSETS=(versions/*/build/libs/globalanarchy-mc-*-"${VERSION}".jar)
           shopt -u nullglob
 
           if [ ${#ASSETS[@]} -eq 0 ]; then
-            echo "::error::No built jars matched versions/*/build/libs/anarchymod-mc-*-${VERSION}.jar - refusing to create an empty release." >&2
+            echo "::error::No built jars matched versions/*/build/libs/globalanarchy-mc-*-${VERSION}.jar - refusing to create an empty release." >&2
             exit 1
           fi
 
           gh release create "${VERSION}" \
-            --title "AnarchyMod ${VERSION}" \
+            --title "Global Anarchy ${VERSION}" \
             --notes "${NOTES}" \
             "${ASSETS[@]}"
 
@@ -153,7 +153,7 @@ jobs:
         run: |
           DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${VERSION}"
 
-          link() { echo "[${1}](${DOWNLOAD_URL}/anarchymod-mc-${1}-${VERSION}.jar)"; }
+          link() { echo "[${1}](${DOWNLOAD_URL}/globalanarchy-mc-${1}-${VERSION}.jar)"; }
           join() { local IFS=","; local out="$*"; echo "${out//,/, }"; }
 
           mapfile -t MC_VERSIONS < <(for f in versions/*/gradle.properties; do

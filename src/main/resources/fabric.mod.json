@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "anarchymod",
+  "id": "globalanarchy",
   "version": "${version}",
-  "name": "AnarchyMod",
-  "description": "The Minecraft mod required to play on 6b6t - bypass Mojang's ban of the world's biggest anarchy server.",
+  "name": "Global Anarchy",
+  "description": "Unblock every server on Mojang's ban list - bypasses the blocked-server list for all servers, not just one.",
   "authors": [
     "6b6t"
   ],
   "contact": {
-    "homepage": "https://www.6b6t.org/?utm_source=anarchymod&utm_medium=mod_menu&utm_campaign=evergreen_website&utm_content=description_link",
-    "issues": "https://github.com/6b6t/AnarchyMod/issues",
-    "sources": "https://github.com/6b6t/AnarchyMod"
+    "homepage": "https://www.6b6t.org/?utm_source=globalanarchy&utm_medium=mod_menu&utm_campaign=evergreen_website&utm_content=description_link",
+    "issues": "https://github.com/esaiaswestberg/AnarchyMod/issues",
+    "sources": "https://github.com/esaiaswestberg/AnarchyMod"
   },
   "license": "MIT",
-  "icon": "assets/anarchymod/icon.png",
+  "icon": "assets/globalanarchy/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.blockhost.anarchymod.AnarchyMod"
+      "net.blockhost.globalanarchy.GlobalAnarchy"
     ]
   },
   "mixins": [
-    "anarchymod.mixins.json"
+    "globalanarchy.mixins.json"
   ],
   "custom": {
     "modmenu": {

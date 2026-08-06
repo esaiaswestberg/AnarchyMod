@@ -22,8 +22,8 @@ jobs:
 
       - uses: actions/upload-artifact@v7
         with:
-          name: anarchymod-builds
+          name: globalanarchy-builds
           path: |
-            versions/*/build/libs/anarchymod-mc-*.jar
-            !versions/*/build/libs/anarchymod-mc-*-sources.jar
+            versions/*/build/libs/globalanarchy-mc-*.jar
+            !versions/*/build/libs/globalanarchy-mc-*-sources.jar
           if-no-files-found: error
