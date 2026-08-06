@@ -1,7 +1,6 @@
-package net.blockhost.anarchymod.mixin;
+package net.blockhost.globalanarchy.mixin;
 
 import com.mojang.patchy.BlockedServers;
-import net.blockhost.anarchymod.Domains;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,9 +15,7 @@ public class BlockedServersMixin {
     *///?} else {
     public void isBlockedServerHostName(String server, CallbackInfoReturnable<Boolean> cir) {
     //?}
-        boolean contains = Domains.contains(server);
-        if (contains) {
-            cir.setReturnValue(false);
-        }
+        // Global Anarchy: no server is ever reported as blocked, defeating Mojang's blocklist for every host.
+        cir.setReturnValue(false);
     }
 }

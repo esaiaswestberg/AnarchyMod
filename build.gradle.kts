@@ -11,7 +11,7 @@ version = property("mod_version")!!
 group = property("maven_group")!!
 
 base {
-    archivesName.set("anarchymod-mc-${minecraftVersion}")
+    archivesName.set("globalanarchy-mc-${minecraftVersion}")
 }
 
 // for fallback since 6 requires 17+ and 5 requires <17
@@ -49,7 +49,7 @@ tasks.processResources {
         )
     }
 
-    filesMatching("anarchymod.mixins.json") {
+    filesMatching("globalanarchy.mixins.json") {
         expand(
             "java_version" to javaVersion
         )
