@@ -5,15 +5,14 @@
   "name": "Global Anarchy",
   "description": "Unblock every server on Mojang's ban list - bypasses the blocked-server list for all servers, not just one.",
   "authors": [
-    "6b6t"
+    "Global Anarchy"
   ],
   "contact": {
-    "homepage": "https://www.6b6t.org/?utm_source=globalanarchy&utm_medium=mod_menu&utm_campaign=evergreen_website&utm_content=description_link",
+    "homepage": "https://github.com/esaiaswestberg/AnarchyMod",
     "issues": "https://github.com/esaiaswestberg/AnarchyMod/issues",
     "sources": "https://github.com/esaiaswestberg/AnarchyMod"
   },
   "license": "MIT",
-  "icon": "assets/globalanarchy/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
@@ -23,13 +22,6 @@
   "mixins": [
     "globalanarchy.mixins.json"
   ],
-  "custom": {
-    "modmenu": {
-      "links": {
-        "modmenu.discord": "https://6b6t.org/discord"
-      }
-    }
-  },
   "depends": {
     "fabricloader": "*",
     "minecraft": "${minecraft_version}",
